@@ -1,0 +1,191 @@
+
+/* Estilo do main */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+/* Estilo de Informacoes */
+.div-informacoes{
+    background-color: var(--opacity-purple);
+    width: 60rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+}
+.div-informacoes> h2{
+    text-transform: uppercase;
+    color: var(--off-white);
+    margin-bottom: 2rem;
+}
+
+.div-informacoes > div > h2{
+    text-transform: uppercase;
+    color: var(--off-white);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.div-informacoes > div p{
+    color: var(--purple);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+.div-personagens{
+    background-color: var(--opacity-purple);
+    width: 60rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--off-white);
+}
+
+.div-personagens > h2{
+    margin-bottom: 2rem;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem 0 1rem;
+    
+}
+.cards > div{
+    background-color: var(--purple);
+    border-radius: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    width: 25rem;
+    height: 30rem;
+}
+.cards > div > h2{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards > div > img{
+    width: 100%;
+    object-fit: cover;
+    height: 27rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+/* Estilo do Botão */
+#abrir-modal{
+    border: none;    
+    background-color: var(--purple);
+    color: var(--off-white);
+    font-size: 1rem;
+    font-weight: 800;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* Estilo do Modal */
+.div-modal{
+    height: 60rem;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--off-white);
+}
+.div-modal > div{
+    background-color: var(--opacity-dark);
+    margin: 5rem auto;
+    width: 40rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-modal > div > h2{
+    margin-top: 2rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+input{    
+    text-align: center;
+
+    width: 19rem;
+    border: none;
+    color: var(--purple);
+    padding-left: 0.5rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    height: 1.5rem;
+}
+input::placeholder{
+    border: none;
+    color: var(--purple);
+    font-weight: 700;
+    text-align: center;
+}
+
+.input-arquivo{
+    color: var(--off-white);
+    border-radius: 0;
+    padding-left: 0;
+}
+form > button{
+    justify-self: center;
+    font-weight: 700;
+    border: none;
+    color: var(--purple);
+    width: 15rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    height: 1.5rem;
+}
+.escondida{
+    display: none;
+}
+
+/* Estilos adicionais para dispositivos menores */
+@media (max-width: 768px) {
+    header > h1{
+        font-size: large;
+        margin-left: 1rem;
+    }
+    .link-pagina{
+        font-size: 0.9rem;
+        margin-right: 1rem;
+    }
+    .div-informacoes, .div-personagens {
+        width: 90%;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    
+    .cards>div {
+        margin-bottom: 40px;
+        width: 90%;
+    }
+
+    #abrir-modal {
+        width: 100%;
+        max-width: 12rem;
+    }
+}
